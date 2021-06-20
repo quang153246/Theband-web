@@ -50,6 +50,25 @@ html{
 .overflow-hidden{
     overflow: hidden;
 }
+                /* Fading animation */
+
+.fade { 
+
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
 /*Main*/
 #main{
 overflow: hidden;
@@ -148,13 +167,13 @@ overflow: hidden;
   
 }
 
-#slider{
+.slider{
+    display: none;
     position: relative;
     margin-top: 46px;
     padding-top: 50%;
-    background: url('/assets/img/slider2.jpg') top center / cover no-repeat;
 }
-#slider .text-content{
+.slider .text-content{
     position: absolute;
     bottom: 47px;
     color:#fff;
@@ -165,13 +184,13 @@ overflow: hidden;
     text-shadow: 1px 1px 1px #000;
 
 }
-#slider .text-content .text-heading{
+.slider .text-content .text-heading{
     margin-bottom:25px;
     font-weight: 500;
     font-size: 24px;
 
 }   
-#slider .text-content .text-discription{
+.slider .text-content .text-discription{
     font-size: 15px;
 }
 #content{

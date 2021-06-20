@@ -42,15 +42,26 @@
             </div>
             <!--end: Search Button-->
         </div>
+            <!--Slider-->
 
-
-        <div id="slider">
+        <div class="slider fade" style="background: url('/assets/img/slider1.jpg') top center / cover no-repeat;">
             <div class="text-content">
                 <h2 class="text-heading">New York</h2>
                 <div class="text-discription">The atmosphere in New York is lorem ipsum.</div>
             </div>
         </div>
-
+        <div class="slider fade" style="background: url('/assets/img/slider2.jpg') top center / cover no-repeat;">
+            <div class="text-content">
+                <h2 class="text-heading">Chicago</h2>
+                <div class="text-discription">Thank you, Chicago - A night we won't forget.</div>
+            </div>
+        </div>
+        <div class="slider fade" style="background: url('/assets/img/slider3.jpg') top center / cover no-repeat;">
+            <div class="text-content">
+                <h2 class="text-heading">LA</h2>
+                <div class="text-discription">Even though the traffic was a mess, we had the best time playing at Venice Beach!</div>
+            </div>
+        </div>
 
         <div id="content">
             <div id="band" class="content-section">
@@ -201,8 +212,26 @@
         }
         
     }
-
 </script>
+    //Slideshow
+    <script>
+        var slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          var i;
+          var slides =document.getElementsByClassName("slider");
+          console.log(slides.length)
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+         
+          slides[slideIndex-1].style.display = "block";  
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
 
 </body>
 </html>
